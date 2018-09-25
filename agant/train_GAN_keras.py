@@ -2,7 +2,7 @@ import torch
 from torch.autograd import Variable
 import numpy as np
 from torchvision.utils import save_image
-from training_function_generator_keras import training_fucntion_generator
+from training_function_generator_keras import training_function_generator
 from compute_gradient_penalty import compute_gradient_penalty
 from sample_image import sample_image
 import matplotlib.pyplot as plt
@@ -248,7 +248,7 @@ def train_GAN(conf_data):
             if seq == 0:
                 conf_data['noise'] = z
 
-            training_fucntion_generator(conf_data)
+            training_function_generator(conf_data)
            
 
             if seq == 0:

@@ -33,7 +33,7 @@ class GANLoss(nn.Module):
         loss = loss * reward
         loss =  -torch.sum(loss)
         return loss
-def training_fucntion_generator(conf_data):
+def training_function_generator(conf_data):
     """Training Process for generator network.
     
     Parameters
