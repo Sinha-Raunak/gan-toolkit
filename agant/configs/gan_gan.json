@@ -18,5 +18,7 @@
     },
     
     "data_path":"datasets/dataset1.p",
+    "backend":1,
     "metric_evaluate":"MMD"
+    
 }
