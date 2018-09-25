@@ -50,6 +50,7 @@ def argument_parser():
 	parser.add_argument('--d_b1', type=float, help='Value of b1 for discriminator')
 	parser.add_argument('--d_b2', type=float, help='Value of b2 for discriminator')
 	parser.add_argument('--d_loss', type=str, help='Choice of loss for discriminator')
+	parser.add_argument('--backend', type=int, help='Which backend')
 	opt = parser.parse_args()
 	
 	if opt.configuration == None:
@@ -67,7 +68,7 @@ def argument_parser():
 		conf_data['performance_log'] = opt.performance_log
 		conf_data['data_path'] = opt.data_path
 		conf_data['metric_evaluate'] = opt.metric_evaluate
-
+		conf_data['backend'] = opt.backend
 		conf_data['GAN_model']['epochs'] = opt.epochs
 		conf_data['GAN_model']['mini_batch_size'] = opt.batch_size
 		conf_data['GAN_model']['clip_value'] = opt.clip_value

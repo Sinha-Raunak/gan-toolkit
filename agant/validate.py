@@ -36,7 +36,8 @@ def validate_check(conf_data):
 	}
 
 	rules = {
-		"data_path":[Required, Truthy()]
+		"data_path":[Required, Truthy()],
+		"backend":[Required,In([0,1])]
 	}
 
 	validation_1 = validate(rules_generator, conf_data['generator'])
